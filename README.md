@@ -1,108 +1,29 @@
-# De Gouden Korst Bakkerij Website
+# 🥖 Bakkerijopdracht
 
-Een moderne en interactieve website voor ambachtelijke bakkerij "De Gouden Korst" met een uitgebreid spaarprogramma.
+Deze repository bevat de broncode voor de website van de **Bakkerijopdracht**, een project waarbij een eenvoudige en overzichtelijke bakkerijwebsite is ontwikkeld.
 
-## Projectstructuur
+Bekijk de live website hier:  
+👉 [https://bakkerijopdracht.vercel.app](https://bakkerijopdracht.vercel.app)
 
-```
-Bakkerij opdracht/
-├── index.html          # Hoofdpagina met navigatie
-├── css/
-│   └── styles.css      # Styling voor de website
-├── js/
-│   └── script.js       # JavaScript voor interactiviteit
-└── images/             # Map voor afbeeldingen
-    ├── Bakkerij.png    # Afbeelding van de bakkerij
-    └── andere afbeeldingen...
-```
+## 📦 Inhoud van de repository
 
-## Functionaliteiten
+De repository bevat onder andere:
 
-### Basis Functionaliteiten
+- HTML-bestanden voor de structuur van de website
+- CSS voor de opmaak en styling
+- Eventuele afbeeldingen en assets voor het ontwerp
+- (Indien van toepassing) JavaScript voor interactieve elementen
 
-- Responsieve navigatie met animaties
-- Vier hoofdpagina's:
-  - Home (welkomsttekst en beschrijving)
-  - Ons assortiment (productoverzicht met filters)
-  - Gouden Koorts (spaarprogramma met voordelen)
-  - Contact (interactief contactformulier met validatie)
-- Modern en gebruiksvriendelijk design
-- Volledig responsive voor alle schermformaten
+## 🚀 Deployment
 
-### Winkelwagen Functionaliteiten
+Deze website is live gezet met behulp van [Vercel](https://vercel.com/), een platform voor het hosten van frontend-projecten.  
+Elke push naar de `main` branch triggert automatisch een nieuwe deployment naar de live website.
 
-- Producten toevoegen aan winkelwagen
-- Dynamische winkelwagenteller
-- Producten verwijderen
-- Hoeveelheden aanpassen
-- Afrekenpagina met bezorgopties
+## 📁 Installatie (optioneel lokaal gebruiken)
 
-### Gouden Koorts Spaarprogramma
+Als je het project lokaal wil bekijken of bewerken, volg dan deze stappen:
 
-- Drie spaarlevels (Brons, Zilver, Goud) met verschillende voordelen
-- Dynamisch puntensysteem dat bijhoudt hoeveel punten de klant heeft gespaard
-- Visuele voortgangsbalk die het huidige niveau toont
-- Dagelijkse deals met timers
-- Speciale kortingen afhankelijk van het spaarniveau
-
-## Technische Details
-
-- HTML5 voor de structuur
-- CSS3 voor styling (met geavanceerde animaties en effecten)
-- Vanilla JavaScript voor interactiviteit
-- Dynamische paginawissel zonder pagina te herladen
-- Geen externe dependencies nodig
-
-### Geavanceerde Functies
-
-- Real-time openingsstatus die zich aanpast aan de huidige tijd
-- Dynamisch genereren van productkaarten
-- Formuliervalidatie
-- Notificatiesysteem met animaties
-- Afteltimers voor dagelijkse deals
-
-## Gebruik
-
-1. Download of clone de repository
-2. Open `index.html` in een moderne webbrowser
-3. Navigeer door de website via het menu
-4. Test het spaarprogramma door producten toe te voegen aan de winkelwagen
-
-## Spaarprogramma Niveaus
-
-Het Gouden Koorts spaarprogramma heeft drie niveaus:
-
-- **Brons** (0-499 punten):
-
-  - 5% korting op alle broden
-  - Toegang tot dagelijkse deals
-  - Spaar punten met elke aankoop
-
-- **Zilver** (500-999 punten):
-
-  - 10% korting op alle producten
-  - Exclusieve seizoensaanbiedingen
-  - Gratis koffie bij elke bestelling
-
-- **Goud** (1000+ punten):
-  - 15% korting op alle producten
-  - Gratis bezorging
-  - VIP toegang tot nieuwe producten
-  - Maandelijkse verrassingsbox
-
-## Browser Compatibiliteit
-
-De website werkt in alle moderne browsers:
-
-- Google Chrome
-- Mozilla Firefox
-- Microsoft Edge
-- Safari
-
-## Toekomstige Ontwikkelingen
-
-- Account systeem voor klanten
-- Online bestellingen
-- Integratie met betalingssystemen
-- Bezorgtracking
-- Loyaliteitspunten voor sociale media shares
+```bash
+git clone https://github.com/Jasper-van-Tilborg/bakkerijopdracht.git
+cd bakkerijopdracht
+# Open het index.html bestand in je browser of gebruik een live server
