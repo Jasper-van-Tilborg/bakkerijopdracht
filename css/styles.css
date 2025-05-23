@@ -1,0 +1,486 @@
+/* Gouden Koorts Styling */
+.gouden-koorts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  animation: fadeIn 0.5s ease-in-out;
+  background: linear-gradient(135deg, #fff8e1 0%, #fff 100%);
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gouden-koorts-container h1 {
+  text-align: center;
+  color: #7b3f00;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-family: "Playfair Display", serif;
+}
+
+.gouden-koorts-container h1::before {
+  content: "★";
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.gouden-koorts-container h1::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, #cd7f32, #ffd700);
+  margin: 1.5rem auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gouden-koorts-punten {
+  background: linear-gradient(135deg, #f6e6b4 0%, #ed9017 100%);
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.gouden-koorts-punten::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 60%
+  );
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.punten-status {
+  position: relative;
+  z-index: 1;
+}
+
+.punten-status h3 {
+  margin-top: 0;
+  color: #7b3f00;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.punten-status p {
+  font-size: 1.2rem;
+  margin: 0.8rem 0;
+}
+
+.voortgang-balk {
+  width: 100%;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 17.5px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.voortgang {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Niveau-specifieke stijlen */
+.niveau-brons .voortgang {
+  background: linear-gradient(90deg, #cd7f32, #8b4513);
+}
+
+.niveau-zilver .voortgang {
+  background: linear-gradient(90deg, #c0c0c0, #808080);
+}
+
+.niveau-goud .voortgang {
+  background: linear-gradient(90deg, #ffd700, #daa520);
+}
+
+.voortgang::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  to {
+    left: 100%;
+  }
+}
+
+.gouden-koorts-deals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+.deal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.deal-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #cd7f32, #ffd700);
+}
+
+.deal-card::after {
+  content: "DAGELIJKSE DEAL";
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: linear-gradient(90deg, #e67e22, #d35400);
+  color: white;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.deal-card:hover {
+  transform: translateY(-15px);
+  border-color: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.deal-card h3 {
+  color: #7b3f00;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1.3rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.original-price::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: 110%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e74c3c, transparent);
+  transform: rotate(-10deg);
+}
+
+.deal-price {
+  font-size: 2.5rem;
+  color: #e67e22;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Playfair Display", serif;
+}
+
+.timer {
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  font-family: "Courier New", monospace;
+  font-size: 1.3rem;
+  border: 2px solid #eee;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: #7b3f00;
+}
+
+.deal-button {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.deal-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.deal-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.deal-button:hover::before {
+  left: 100%;
+}
+
+.deal-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.voordelen {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.voordelen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #cd7f32, #c0c0c0, #ffd700);
+}
+
+.voordelen h2 {
+  text-align: center;
+  color: #7b3f00;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  font-family: "Playfair Display", serif;
+}
+
+.voordelen h2::before {
+  content: "✨";
+  position: absolute;
+  left: 50%;
+  top: -35px;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  color: #ffd700;
+}
+
+.voordelen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.voordeel {
+  text-align: center;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.voordeel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 48%,
+    rgba(255, 215, 0, 0.1) 50%,
+    transparent 52%
+  );
+  z-index: 1;
+  transform: scale(2);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.voordeel:hover {
+  transform: translateY(-10px);
+  border-color: rgba(205, 127, 50, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.voordeel:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.voordeel h3 {
+  color: #7b3f00;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 2;
+  font-family: "Playfair Display", serif;
+}
+
+.voordeel h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #cd7f32, #ffd700);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.voordeel p {
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Niveau badges */
+.voordeel[data-niveau="brons"] h3::before {
+  content: "🥉";
+  margin-right: 8px;
+}
+
+.voordeel[data-niveau="zilver"] h3::before {
+  content: "🥈";
+  margin-right: 8px;
+}
+
+.voordeel[data-niveau="goud"] h3::before {
+  content: "🥇";
+  margin-right: 8px;
+}
+
+/* Responsive aanpassingen */
+@media (max-width: 768px) {
+  .gouden-koorts-container {
+    padding: 1rem;
+  }
+
+  .gouden-koorts-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .voordelen h2 {
+    font-size: 2rem;
+  }
+
+  .gouden-koorts-deals {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .voordelen-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .deal-card {
+    padding: 2rem;
+  }
+
+  .voordelen {
+    padding: 2rem;
+  }
+
+  .deal-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .deal-price {
+    font-size: 2.2rem;
+  }
+}
